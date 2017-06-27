@@ -1,0 +1,28 @@
+﻿  Vect.cpp
+  Straight.cpp
+d:\cpp\opencv_test\straight.cpp(64): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+d:\cpp\opencv_test\straight.cpp(65): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  main.cpp
+d:\cpp\opencv_test\main.cpp(33): warning C4018: <: несоответствие типов со знаком и без знака
+d:\cpp\opencv_test\main.cpp(36): warning C4018: <: несоответствие типов со знаком и без знака
+d:\cpp\opencv_test\main.cpp(28): warning C4101: B: неиспользованная локальная переменная
+d:\cpp\opencv_test\main.cpp(28): warning C4101: G: неиспользованная локальная переменная
+d:\cpp\opencv_test\main.cpp(75): warning C4018: <: несоответствие типов со знаком и без знака
+d:\cpp\opencv_test\main.cpp(78): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPAX@Z) в функции "public: __thiscall cv::Mat::~Mat(void)" (??1Mat@cv@@QAE@XZ)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "private: char * __thiscall cv::String::allocate(unsigned int)" (?allocate@String@cv@@AAEPADI@Z) в функции "public: __thiscall cv::String::String(char const *)" (??0String@cv@@QAE@PBD@Z)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "private: void __thiscall cv::String::deallocate(void)" (?deallocate@String@cv@@AAEXXZ) в функции "public: __thiscall cv::String::~String(void)" (??1String@cv@@QAE@XZ)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "void __cdecl cv::error(int,class cv::String const &,char const *,char const *,int)" (?error@cv@@YAXHABVString@1@PBD1H@Z) в функции "public: class cv::Vec<unsigned char,3> & __thiscall cv::Mat::at<class cv::Vec<unsigned char,3> >(int,int)" (??$at@V?$Vec@E$02@cv@@@Mat@cv@@QAEAAV?$Vec@E$02@1@HH@Z)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __thiscall cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QAEXXZ) в функции "public: void __thiscall cv::Mat::release(void)" (?release@Mat@cv@@QAEXXZ)
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvReleaseImage в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvCloneImage в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "class cv::Mat __cdecl cv::imread(class cv::String const &,int)" (?imread@cv@@YA?AVMat@1@ABVString@1@H@Z) в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "bool __cdecl cv::imwrite(class cv::String const &,class cv::_InputArray const &,class std::vector<int,class std::allocator<int> > const &)" (?imwrite@cv@@YA_NABVString@1@ABV_InputArray@1@ABV?$vector@HV?$allocator@H@std@@@std@@@Z) в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvLoadImage в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvNamedWindow в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvShowImage в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvDestroyWindow в функции _main
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _cvWaitKey в функции _main
+D:\OpenCV\opencv\build\x64\vc14\lib\opencv_world320d.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "X86"
+D:\CPP\OpenCV_test\Debug\OpenCV_test.exe : fatal error LNK1120: неразрешенных внешних элементов: 14
