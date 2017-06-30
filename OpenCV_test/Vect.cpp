@@ -2,20 +2,20 @@
 
 
 
-Vect::Vect(cv::Point point1, cv::Point point2)			//Конструктор №1. В качестве аргументов принимает начальную и конечную точки
+Vect::Vect(cv::Point point1, cv::Point point2)			
 {
 	spoint = point1;
 	epoint = point2;
 }
 
-Vect::Vect(int x1, int y1, int x2, int y2)			//Конструктор №2. В качестве аргументов принимает координаты начальной и конечной точек
+Vect::Vect(int x1, int y1, int x2, int y2)			
 {
 	spoint = cv::Point(x1, y1);
 	epoint = cv::Point(x2, y2);
 }
 
-Vect::Vect(double x1, double y1, double x2, double y2)//Конструктор №3. В качестве аргументов принимает координаты начальной и конечной точек,
-{													  //после чего приводит их к типу int
+Vect::Vect(double x1, double y1, double x2, double y2)
+{													  
 	spoint = cv::Point((int)x1, (int)y1);
 	epoint = cv::Point((int)x2, (int)y2);
 }
@@ -26,14 +26,14 @@ Vect::~Vect()
 }
 
 
-Vect Vect::Base()								// Вектор той же длины и направления, выходящий из начала координат
+Vect Vect::Base()								
 {
 	return Vect(0, 0, epoint.x - spoint.x, epoint.y - spoint.y);
 }
 
 
 
-NormVect Vect::Norm()							//Нормированный вектор
+NormVect Vect::Norm()							
 {
 	NormVect temp;
 	temp.x = (double)this->Base().epoint.x / this->Length();
@@ -48,13 +48,13 @@ void Vect::Move(cv::Point p)
 	epoint = cv::Point(p.x + temp.epoint.x, p.y + temp.epoint.y);
 }
 
-void Vect::ShowBase()							//Вывод базового вектора на экран
+void Vect::ShowBase()							
 {
 	std::cout << "(" << this->Base().epoint.x << "; " << this->Base().epoint.y << ")\n";
 }
 
 
-double Vect::Length()							//Длина вектора
+double Vect::Length()							
 {
 	return sqrt(pow(this->Base().epoint.x, 2) + pow(this->Base().epoint.y, 2));
 }
