@@ -2,14 +2,14 @@
 
 
 
-Straight::Straight(double c1,double c2, double c3)	//Конструктор №1. Параметры - коэффициенты канонического уравнения	
+Straight::Straight(double c1,double c2, double c3)	
 {
 	a = c1;
 	b = c2;
 	c = c3;
 }
 
-Straight::Straight(cv::Point p, Vect v)			//Конструктор №2. Параметры - одна из точек и направление прямой
+Straight::Straight(cv::Point p, Vect v)			
 {
 	cv::Point temp = cv::Point(v.Base().epoint.x+p.x, v.Base().epoint.y+p.y);
 	a = -v.Base().epoint.y;
@@ -17,14 +17,14 @@ Straight::Straight(cv::Point p, Vect v)			//Конструктор №2. Параметры - одна из 
 	c = p.x*temp.y - temp.x*p.y;
 }
 
-Straight::Straight(cv::Point point1, cv::Point point2)	//Конструктор №3. Параметры - 2 точки, лежащие на прямой
+Straight::Straight(cv::Point point1, cv::Point point2)	
 {
 	a = point1.y - point2.y;
 	b = point2.x - point1.y;
 	c = point1.x*point2.y - point2.x*point1.y;
 }
 
-Straight::Straight(double k1, double k2)				//Конструктор №4. Параметры - коэффициенты уравнения y=k1*x+k2
+Straight::Straight(double k1, double k2)				
 {
 	a = -k1;
 	b = 1;
@@ -47,7 +47,6 @@ bool operator==(const Straight & left, const Straight & right)
 	
 	if ((left.a == 0 && left.b == 0) || (right.a == 0 && right.b == 0))
 	{
-		std::cout << "Одна из прямых задана некорректно.";
 		return false;
 	}
 	else
